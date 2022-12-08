@@ -29,12 +29,17 @@
         center:new Microsoft.Maps.Location(35.544183970713334, 134.81330869397715),
         // let infoWind=new Microsoft.Maps.InfoWindow();
 
-        var infobox = new Microsoft.Maps.Infobox(map.getCenter(), {
-          width: 160,
-          height: 80
-        });
+        
       });
 
+      let infobox = new Microsoft.Maps.Infobox(map.getCenter(), {
+        width: 160,
+        height: 80,
+        title: "豊岡駅",
+        description: "豊岡市の中心の駅"
+        // img.src='img/toyookaeki.jpeg'
+      });
+      infobox.setMap(map);
       // centerからスタートさせる↓
         let pushpin_station= new Microsoft.Maps.Pushpin(map.getCenter());
         // pushpinを表示させる↓
@@ -43,18 +48,27 @@ map.entities.push(pushpin_station);
 // -------------------------------------
 // 　　　　　豊小のpushpin↓
 // --------------------------------------
-let pushpin_toyosyou= new Microsoft.Maps.Pushpin({latitude:35.541965219092525, longitude:134.82205814002293,title:'豊岡小学校',subTitle:"ひまわり学級",},{color:"#ff9900",} 
+let pushpin_toyosyou= new Microsoft.Maps.Pushpin({latitude:35.541965219092525, longitude:134.82205814002293},{color:"#ff9900",} 
 // ,{title:'豊岡小学校',subTitle:"ひまわり学級",text:"A"} 
  );
+
+//  let infobox_toyosyou = new Microsoft.Maps.Infobox(map.getPushpin(), {
+//   width: 160,
+//   height: 80,
+//   title: "豊岡小学校",
+//   description: "ひまわり学級"
+// });
+// infobox_toyosyou.setMap(map);
+
 // pushpinを表示させる↓
 map.entities.push(pushpin_toyosyou);
 
 // 豊小のpushpinクリックイベント↓
  Microsoft.Maps.Events.addHandler(pushpin_toyosyou,"click",function(){
-  alert("click");
+  alert("豊岡小学校　ひまわり学級");
   // $("#toyosyou").hide();
   // toggleを使うことで、クリックしたら表示＆隠すことができる↓
-  $(".toyosyou").toggle(1000);
+  // $(".toyosyou").toggle(1000);
             });
 // --------------------------------------
 // 　　　　　出石特別支援のpushpin↓
@@ -62,12 +76,12 @@ map.entities.push(pushpin_toyosyou);
 let pushpin_izushi_school= new Microsoft.Maps.Pushpin({latitude:35.47786214757359, longitude:134.86872629492163},{color:"#ff9900",} );
 // pushpinを表示させる↓
 map.entities.push(pushpin_izushi_school);
-map.infobox(35.541965219092525, 134.82205814002293, "豊岡小学校", "ひまわり学級(特別支援学級)");
+// map.infobox(35.541965219092525, 134.82205814002293);
 
-// 豊小のpushpinクリックイベント↓
+// 出石特別支援のpushpinクリックイベント↓
  Microsoft.Maps.Events.addHandler(pushpin_izushi_school,"click",function(){
-  alert("click");
-  $(".izushi_tokubetsu").toggle(1000);
+  alert("出石特別支援学校");
+  // $(".izushi_tokubetsu").toggle(1000);
             });
 
 // --------------------------------------
@@ -77,10 +91,10 @@ let pushpin_seiwaen= new Microsoft.Maps.Pushpin({latitude:35.4714349, longitude:
 // pushpinを表示させる↓
 map.entities.push(pushpin_seiwaen);
 
-// 豊小のpushpinクリックイベント↓
+// 精和園成人寮のpushpinクリックイベント↓
  Microsoft.Maps.Events.addHandler(pushpin_seiwaen,"click",function(){
-  alert("click");
-  $(".seiwaen").toggle(1000);
+  alert("精和園成人寮");
+  // $(".seiwaen").toggle(1000);
             });
 
 

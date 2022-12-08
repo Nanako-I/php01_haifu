@@ -61,7 +61,7 @@ fclose($file);
     
       <!-- jQuery&GoogleMapsAPI -->
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=' async
+  <script src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=AlmKw1rmOPFHgKj76GFFzeTL1A_mlDV3-B-BN1G3GOiKKHrX0ujzf_NHqD7l5P-O' async
     defer></script>
   <script src="js/BmapQuery.js"></script>
   <script src="js/map.js"></script>
