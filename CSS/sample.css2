@@ -1,0 +1,58 @@
+body{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  position:relative;
+  background-color: #00ffff;
+  width: 1000px;
+  margin: 30px auto;
+}
+
+.kekka:nth-child(odd){
+  background: #ffffff;
+  margin-left: auto;
+  width: 30%;
+  border-radius: 10px;
+  position: relative;
+  margin: 0 20px 0 auto;
+}
+
+.kekka:nth-child(odd):before {
+  content: "";
+  /* borderで三角形を作る */
+  border: 10px solid transparent;
+  /* border-left:で右向きの三角形を作る↓ */
+  border-left: 30px solid #ffffff;
+  /* 配置する */
+  position: absolute;
+  /* 上から50％ */
+  top: 50%;
+  /* 四角の右横に吹き出しをつけるため、-24PXと指定 */
+  right: -24px;
+  /* transform: translateX(-50%); */
+}
+
+.kekka:nth-child(even){
+  background: #ffffff;
+  margin-right: auto;
+  width: 30%;
+  border-radius: 10px;
+  position: relative;
+  margin: 0 auto 0 20px;
+}
+
+.kekka:nth-child(even):before {
+  content: "";
+  /* borderで三角形を作る */
+  border: 10px solid transparent;
+  /* border-right:で左向きの三角形を作る↓ */
+  border-right: 30px solid #ffffff;
+  /* 配置する */
+  position: absolute;
+  /* 上から50％ */
+  top: 50%;
+  /* 四角の左横に吹き出しをつけるため、-24PXと指定 */
+  left: -24px;
+  /* transform: translateX(-50%); */
+}
